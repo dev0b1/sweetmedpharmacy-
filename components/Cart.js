@@ -108,7 +108,7 @@ export default function Cart() {
                 href={createWhatsAppOrderLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center bg-sweetmed-green hover:bg-sweetmed-green-dark text-white px-4 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-md w-full mb-2"
+                className="flex items-center justify-center bg-[#25D366] hover:bg-[#1DA851] text-white px-4 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-md w-full mb-2"
               >
                 <FaWhatsapp className="mr-2 text-xl" />
                 Order via WhatsApp

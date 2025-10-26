@@ -7,6 +7,11 @@ SweetMedPharmacy is a responsive single-page pharmacy website built with Next.js
 This MVP website serves as an online presence for SweetMedPharmacy, allowing customers to browse products and place orders directly via WhatsApp.
 
 ## Recent Changes
+- **October 26, 2025**: Bug Fixes & UI Improvements
+  - Fixed broken product images for Vitamin C and Omega-3 Fish Oil by using local stock images
+  - Updated WhatsApp order button to use official WhatsApp green color (#25D366) for better visibility
+  - All product images now loading correctly
+
 - **October 26, 2025**: App Router Migration
   - Migrated from Next.js Pages Router to App Router architecture
   - Created new app/ directory with layout.js and page.js
