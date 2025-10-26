@@ -1,3 +1,5 @@
+'use client';
+
 import { useCart } from '../context/CartContext';
 import { FaTimes, FaWhatsapp, FaPlus, FaMinus, FaTrash } from 'react-icons/fa';
 
