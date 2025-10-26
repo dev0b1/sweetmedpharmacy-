@@ -7,6 +7,14 @@ SweetMedPharmacy is a responsive single-page pharmacy website built with Next.js
 This MVP website serves as an online presence for SweetMedPharmacy, allowing customers to browse products and place orders directly via WhatsApp.
 
 ## Recent Changes
+- **October 26, 2025**: App Router Migration
+  - Migrated from Next.js Pages Router to App Router architecture
+  - Created new app/ directory with layout.js and page.js
+  - Added 'use client' directives to components using hooks and state
+  - Moved metadata configuration to app/layout.js
+  - Removed pages/ directory after successful migration
+  - Verified all functionality remains intact with improved structure
+
 - **October 26, 2025**: Shopping Cart Feature & Hero Section Redesign
   - Redesigned hero section with beautiful gradient (purple → pink → orange) and decorative elements
   - Implemented full shopping cart functionality with React Context API
@@ -34,14 +42,14 @@ This MVP website serves as an online presence for SweetMedPharmacy, allowing cus
 ### Project Structure
 ```
 /
-├── pages/
-│   ├── _app.js           # Next.js app wrapper with CartProvider
-│   └── index.js          # Main homepage with all sections
+├── app/                  # Next.js App Router directory
+│   ├── layout.js         # Root layout with CartProvider and metadata
+│   └── page.js           # Homepage with all sections (client component)
 ├── components/
-│   ├── Layout.js         # Reusable layout with Navbar, Footer, and Cart icon
-│   └── Cart.js           # Shopping cart drawer/modal component
+│   ├── Layout.js         # Reusable layout with Navbar, Footer, and Cart icon (client component)
+│   └── Cart.js           # Shopping cart drawer/modal component (client component)
 ├── context/
-│   └── CartContext.js    # Cart state management with React Context
+│   └── CartContext.js    # Cart state management with React Context (client component)
 ├── styles/
 │   └── globals.css       # Global styles with Tailwind v4 imports
 ├── postcss.config.js     # PostCSS configuration for Tailwind
