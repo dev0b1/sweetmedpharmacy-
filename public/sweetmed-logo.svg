@@ -1,13 +1,38 @@
-<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Pill Icon -->
-  <rect x="5" y="15" width="35" height="30" rx="15" fill="#E91E8C"/>
-  <rect x="5" y="15" width="17.5" height="30" rx="15" fill="#8DC63F"/>
+<svg width="280" height="70" viewBox="0 0 280 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 3D Box Icon -->
+  <g transform="translate(5, 10)">
+    <!-- Back face (darker) -->
+    <path d="M25 5 L45 15 L45 35 L25 25 Z" fill="#C91577"/>
+    
+    <!-- Left face -->
+    <path d="M5 15 L25 5 L25 25 L5 35 Z" fill="#E91E8C"/>
+    
+    <!-- Right face (lighter) -->
+    <path d="M25 25 L45 15 L45 35 L25 45 Z" fill="#E91E8C" opacity="0.85"/>
+    
+    <!-- Bottom left (green) -->
+    <path d="M5 35 L25 25 L25 45 L5 55 Z" fill="#8DC63F"/>
+    
+    <!-- Bottom right (green lighter) -->
+    <path d="M25 45 L45 35 L45 55 L25 65 Z" fill="#8DC63F" opacity="0.85"/>
+    
+    <!-- Top face -->
+    <path d="M5 15 L25 5 L45 15 L25 25 Z" fill="#F24CAB"/>
+    
+    <!-- White dot on top -->
+    <circle cx="25" cy="15" r="3" fill="white"/>
+    
+    <!-- Leaf design -->
+    <path d="M20 35 Q25 30 30 35 Q25 40 20 35" fill="#6FAF2E"/>
+    <path d="M25 30 L25 40" stroke="#6FAF2E" stroke-width="1.5"/>
+    <path d="M22 33 Q25 32 28 33" stroke="#6FAF2E" stroke-width="1" fill="none"/>
+    <path d="M22 37 Q25 36 28 37" stroke="#6FAF2E" stroke-width="1" fill="none"/>
+  </g>
   
-  <!-- Text -->
-  <text x="48" y="28" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#E91E8C">
-    SweetMed
-  </text>
-  <text x="48" y="44" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#6B7280">
-    Pharmacy
-  </text>
+  <!-- Text: sweetmed -->
+  <text x="65" y="38" font-family="'Arial Rounded MT Bold', Arial, sans-serif" font-size="24" font-weight="700" fill="#E91E8C" letter-spacing="-0.5">sweet</text>
+  <text x="140" y="38" font-family="'Arial Rounded MT Bold', Arial, sans-serif" font-size="24" font-weight="700" fill="#8DC63F" letter-spacing="-0.5">med</text>
+  
+  <!-- Text: PHARMACY -->
+  <text x="65" y="55" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#8DC63F" letter-spacing="3">PHARMACY</text>
 </svg>
