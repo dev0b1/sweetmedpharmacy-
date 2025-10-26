@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sweetmed-pink: #E91E8C;
+  --color-sweetmed-pink-light: #F24CAB;
+  --color-sweetmed-pink-dark: #C91577;
+  --color-sweetmed-green: #8DC63F;
+  --color-sweetmed-green-light: #A8D96F;
+  --color-sweetmed-green-dark: #6FAF2E;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f9fafb;
+}
