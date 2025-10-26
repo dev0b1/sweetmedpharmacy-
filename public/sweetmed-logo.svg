@@ -31,8 +31,8 @@
   
   <!-- Text: sweetmed -->
   <text x="65" y="38" font-family="'Arial Rounded MT Bold', Arial, sans-serif" font-size="24" font-weight="700" fill="#E91E8C" letter-spacing="-0.5">sweet</text>
-  <text x="140" y="38" font-family="'Arial Rounded MT Bold', Arial, sans-serif" font-size="24" font-weight="700" fill="#8DC63F" letter-spacing="-0.5">med</text>
+  <text x="140" y="38" font-family="'Arial Rounded MT Bold', Arial, sans-serif" font-size="24" font-weight="700" fill="#A8D96F" letter-spacing="-0.5">med</text>
   
-  <!-- Text: PHARMACY -->
-  <text x="65" y="55" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#8DC63F" letter-spacing="3">PHARMACY</text>
+  <!-- Text: PHARMACY (light green, wide letter spacing) -->
+  <text x="65" y="55" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#A8D96F" letter-spacing="8.5">PHARMACY</text>
 </svg>
