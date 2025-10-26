@@ -38,7 +38,7 @@ export default function Layout({ children }) {
               <img 
                 src="/sweetmed-logo.png" 
                 alt="SweetMed Pharmacy" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -142,7 +142,7 @@ export default function Layout({ children }) {
               <img 
                 src="/sweetmed-logo.png" 
                 alt="SweetMed Pharmacy" 
-                className="h-10 w-auto mb-4"
+                className="h-14 w-auto mb-4"
               />
               <p className="text-gray-300">
                 Your trusted pharmacy partner for premium supplements and healthcare products.
@@ -190,7 +190,7 @@ export default function Layout({ children }) {
                 </div>
                 <div className="flex items-center">
                   <FaMapMarkerAlt className="mr-2" />
-                  <span>Lagos, Nigeria</span>
+                  <span>Warri, Nigeria</span>
                 </div>
               </div>
             </div>

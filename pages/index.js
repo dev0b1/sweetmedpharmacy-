@@ -240,8 +240,8 @@ export default function Home() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">Address</h3>
                     <p className="text-gray-600">
-                      123 Wellness Boulevard, Victoria Island<br />
-                      Lagos, Nigeria
+                      185 Jakpa Road Opp HQ filling Station<br />
+                      Warri, Nigeria
                     </p>
                   </div>
                 </div>

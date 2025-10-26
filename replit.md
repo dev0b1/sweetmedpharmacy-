@@ -125,7 +125,7 @@ Potential features for future iterations:
 ## Contact Information
 - Business Phone: +234 801 234 5678
 - Business Email: info@sweetmedpharmacy.com
-- Location: Lagos, Nigeria
+- Location: 185 Jakpa Road Opp HQ filling Station, Warri, Nigeria
 
 ---
 **Built**: October 25, 2025  
