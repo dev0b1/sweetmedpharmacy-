@@ -17,7 +17,7 @@ const products = [
     name: 'Vitamin C 1000mg',
     description: 'High-potency immune support with rose hips and bioflavonoids',
     price: '₦3,200',
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8ca6?w=400&h=300&fit=crop'
+    image: '/vitamin_c_supplement_973af89b.jpg'
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const products = [
     name: 'Omega-3 Fish Oil 2000mg',
     description: 'Triple strength EPA/DHA for heart and brain health',
     price: '₦5,500',
-    image: 'https://images.unsplash.com/photo-1526627726042-4db39a00d1c9?w=400&h=300&fit=crop'
+    image: '/omega_3_fish_oil_sup_d2bcf1c2.jpg'
   },
   {
     id: 5,
