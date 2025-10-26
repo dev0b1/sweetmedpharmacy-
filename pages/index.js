@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import { FaWhatsapp, FaClock, FaPhone, FaMapMarkerAlt, FaShieldAlt, FaTruck, FaUserMd } from 'react-icons/fa';
+import { FaWhatsapp, FaClock, FaPhone, FaMapMarkerAlt, FaShieldAlt, FaTruck, FaUserMd, FaShoppingCart } from 'react-icons/fa';
+import { useCart } from '../context/CartContext';
 
 const products = [
   {
@@ -62,6 +63,8 @@ const products = [
 ];
 
 export default function Home() {
+  const { addToCart } = useCart();
+
   const scrollToProducts = () => {
     if (typeof window !== 'undefined') {
       const element = document.getElementById('products');
@@ -71,9 +74,8 @@ export default function Home() {
     }
   };
 
-  const createWhatsAppLink = (productName) => {
-    const message = encodeURIComponent(`Hi, I want to order ${productName}`);
-    return `https://wa.me/2348012345678?text=${message}`;
+  const handleAddToCart = (product) => {
+    addToCart(product);
   };
 
   return (
@@ -94,17 +96,21 @@ export default function Home() {
       </Head>
 
       {/* Hero Section */}
-      <section id="home" className="bg-gradient-to-r from-sweetmed-pink to-sweetmed-pink-light text-white py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <section id="home" className="relative bg-gradient-to-br from-purple-600 via-sweetmed-pink to-orange-400 text-white py-24 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full -mr-48 -mt-48"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full -ml-48 -mb-48"></div>
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
             Premium Supplements for Optimal Health
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-95">
+          <p className="text-xl md:text-2xl mb-8 opacity-95 drop-shadow-md">
             Quality vitamins and supplements delivered to your doorstep
           </p>
           <button
             onClick={scrollToProducts}
-            className="bg-white text-sweetmed-pink px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-lg"
+            className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-2xl"
           >
             Shop Now
           </button>
@@ -148,15 +154,13 @@ export default function Home() {
                       {product.price}
                     </span>
                   </div>
-                  <a
-                    href={createWhatsAppLink(product.name)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center bg-sweetmed-green hover:bg-sweetmed-green-dark text-white px-4 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-md"
+                  <button
+                    onClick={() => handleAddToCart(product)}
+                    className="flex items-center justify-center bg-sweetmed-pink hover:bg-sweetmed-pink-dark text-white px-4 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-md w-full"
                   >
-                    <FaWhatsapp className="mr-2 text-xl" />
-                    Order on WhatsApp
-                  </a>
+                    <FaShoppingCart className="mr-2 text-lg" />
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             ))}

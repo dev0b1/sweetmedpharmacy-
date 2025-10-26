@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTimes, FaBars } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaTimes, FaBars, FaShoppingCart } from 'react-icons/fa';
+import { useCart } from '../context/CartContext';
+import Cart from './Cart';
 
 export default function Layout({ children }) {
   const currentYear = new Date().getFullYear();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { getTotalItems, toggleCart } = useCart();
 
   const scrollToSection = (sectionId) => {
     if (typeof window !== 'undefined') {
@@ -26,6 +29,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Cart />
       {/* Navbar */}
       <nav className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +41,7 @@ export default function Layout({ children }) {
                 className="h-12 w-auto"
               />
             </div>
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection('home')}
                 className="text-gray-700 hover:text-sweetmed-pink transition-colors font-medium"
@@ -56,9 +60,33 @@ export default function Layout({ children }) {
               >
                 Contact
               </button>
+              <button
+                onClick={toggleCart}
+                className="relative text-gray-700 hover:text-sweetmed-pink transition-colors"
+                aria-label="Shopping cart"
+              >
+                <FaShoppingCart className="text-2xl" />
+                {getTotalItems() > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-sweetmed-pink text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                    {getTotalItems()}
+                  </span>
+                )}
+              </button>
             </div>
-            {/* Mobile menu button */}
-            <div className="md:hidden">
+            {/* Mobile menu button and cart */}
+            <div className="md:hidden flex items-center space-x-4">
+              <button
+                onClick={toggleCart}
+                className="relative text-gray-700 hover:text-sweetmed-pink transition-colors"
+                aria-label="Shopping cart"
+              >
+                <FaShoppingCart className="text-xl" />
+                {getTotalItems() > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-sweetmed-pink text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                    {getTotalItems()}
+                  </span>
+                )}
+              </button>
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-gray-700 hover:text-sweetmed-pink"
