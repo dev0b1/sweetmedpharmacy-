@@ -18,7 +18,7 @@ export default function Cart() {
     message += '\nPlease confirm availability and total cost. Thank you!';
     
     const encodedMessage = encodeURIComponent(message);
-    return `https://wa.me/2348012345678?text=${encodedMessage}`;
+    return `https://wa.me/2349033306914?text=${encodedMessage}`;
   };
 
   if (!isCartOpen) return null;

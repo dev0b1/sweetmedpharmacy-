@@ -81,7 +81,7 @@ This MVP website serves as an online presence for SweetMedPharmacy, allowing cus
 ### WhatsApp Integration
 The shopping cart includes a "Order via WhatsApp" button that:
 - Opens WhatsApp with a pre-filled message containing all cart items
-- Phone Number: +234 801 234 5678
+- Phone Number: +234 903 330 6914
 - Message Format: Lists all products with quantities and prices
 - Example: "Hi! I would like to order the following items: 1. Magnesium Glycinate 500mg x2 - ₦4,500..."
 
@@ -136,7 +136,7 @@ Potential features for future iterations:
 - Admin dashboard for product management
 
 ## Contact Information
-- Business Phone: +234 801 234 5678
+- Business Phone: +234 903 330 6914
 - Business Email: info@sweetmedpharmacy.com
 - Location: 185 Jakpa Road Opp HQ filling Station, Warri, Nigeria
 
