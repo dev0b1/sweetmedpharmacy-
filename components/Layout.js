@@ -36,9 +36,9 @@ export default function Layout({ children }) {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
               <img 
-                src="/sweetmed-logo.png" 
+                src="/sweetmed-logo.svg" 
                 alt="SweetMed Pharmacy" 
-                className="h-16 w-auto"
+                className="h-14 w-auto"
               />
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -140,9 +140,9 @@ export default function Layout({ children }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <img 
-                src="/sweetmed-logo.png" 
+                src="/sweetmed-logo.svg" 
                 alt="SweetMed Pharmacy" 
-                className="h-14 w-auto mb-4"
+                className="h-12 w-auto mb-4"
               />
               <p className="text-gray-300">
                 Your trusted pharmacy partner for premium supplements and healthcare products.
