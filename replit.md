@@ -7,6 +7,15 @@ SweetMedPharmacy is a responsive single-page pharmacy website built with Next.js
 This MVP website serves as an online presence for SweetMedPharmacy, allowing customers to browse products and place orders directly via WhatsApp.
 
 ## Recent Changes
+- **October 26, 2025**: Shopping Cart Feature & Hero Section Redesign
+  - Redesigned hero section with beautiful gradient (purple → pink → orange) and decorative elements
+  - Implemented full shopping cart functionality with React Context API
+  - Added cart icon in navbar with item count badge
+  - Created cart drawer/modal with add, remove, update quantity, and clear features
+  - Integrated WhatsApp bulk ordering - sends all cart items in one message
+  - Added localStorage persistence for cart items
+  - Updated product cards with "Add to Cart" buttons
+  
 - **October 25, 2025**: Initial project setup and full MVP implementation
   - Created Next.js project with Tailwind CSS v4
   - Implemented responsive layout with Navbar, Hero, Products, About, Contact, and Footer sections
@@ -26,10 +35,13 @@ This MVP website serves as an online presence for SweetMedPharmacy, allowing cus
 ```
 /
 ├── pages/
-│   ├── _app.js           # Next.js app wrapper
+│   ├── _app.js           # Next.js app wrapper with CartProvider
 │   └── index.js          # Main homepage with all sections
 ├── components/
-│   └── Layout.js         # Reusable layout with Navbar and Footer
+│   ├── Layout.js         # Reusable layout with Navbar, Footer, and Cart icon
+│   └── Cart.js           # Shopping cart drawer/modal component
+├── context/
+│   └── CartContext.js    # Cart state management with React Context
 ├── styles/
 │   └── globals.css       # Global styles with Tailwind v4 imports
 ├── postcss.config.js     # PostCSS configuration for Tailwind
@@ -38,17 +50,27 @@ This MVP website serves as an online presence for SweetMedPharmacy, allowing cus
 ```
 
 ### Key Features
-1. **Responsive Navigation**: Sticky navbar with smooth scroll to sections
-2. **Hero Section**: Eye-catching gradient background with CTA button
-3. **Product Grid**: 8 pharmacy products with images, prices (Naira), and WhatsApp ordering
-4. **About Section**: Three feature cards (Quality, Delivery, Expert Guidance)
-5. **Contact Section**: Address, phone, hours, and embedded Google Maps
-6. **Footer**: Site links and contact information
+1. **Responsive Navigation**: Sticky navbar with smooth scroll to sections and cart icon with badge
+2. **Hero Section**: Beautiful multi-color gradient (purple → pink → orange) with decorative circles
+3. **Shopping Cart System**: 
+   - Add products to cart from product cards
+   - Cart drawer shows all selected items
+   - Adjust quantities with +/- buttons
+   - Remove individual items or clear entire cart
+   - Cart persists in localStorage
+   - Cart icon badge shows total item count
+4. **Product Grid**: 8 pharmacy products with images, prices (Naira), and "Add to Cart" buttons
+5. **WhatsApp Bulk Ordering**: Order all cart items via one WhatsApp message
+6. **About Section**: Three feature cards (Quality, Delivery, Expert Guidance)
+7. **Contact Section**: Address, phone, hours, and embedded Google Maps
+8. **Footer**: Site links and contact information
 
 ### WhatsApp Integration
-Each product has a direct WhatsApp link that opens a chat with pre-filled message:
+The shopping cart includes a "Order via WhatsApp" button that:
+- Opens WhatsApp with a pre-filled message containing all cart items
 - Phone Number: +234 801 234 5678
-- Message Format: "Hi, I want to order [Product Name]"
+- Message Format: Lists all products with quantities and prices
+- Example: "Hi! I would like to order the following items: 1. Magnesium Glycinate 500mg x2 - ₦4,500..."
 
 ### Color Scheme
 - Primary Green: #10B981 (pharmacy-green)
